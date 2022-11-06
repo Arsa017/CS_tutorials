@@ -2,27 +2,27 @@
 
 namespace HelloWorld
 {
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisteredAirMail = 2,
+        Express = 3
+    }
     class Program
     {
         static int Main(string[] args)
         {
-            var firstName = "Pera";
-            var lastName = "Peric";
+            var method = ShippingMethod.Express;
+            Console.WriteLine((int) method);
 
-            var fullName = firstName + " " + lastName;
-            var myFullName = string.Format("My name is {0} {1}", firstName, lastName);
-            Console.WriteLine(myFullName);
+            var methodId = 3;
+            Console.WriteLine((ShippingMethod) methodId);
 
-            var names = new string[3] { "Pera", "Zika", "Mika" };
-            var formattedNames = string.Join(", ", names);
-            Console.WriteLine(formattedNames);
+            Console.WriteLine(method.ToString());
 
-            //var text = "Hi John\nLook into the following paths\nc:\\folder1\\folder2\nc:\\folder2\\folder3";
-            var text = @"Hi John
-                        Look into the following path
-                        c:\folder1\folder2
-                        c:\folder3\folder4";
-            Console.WriteLine(text);
+            var MethodName = "Express";
+            var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), MethodName);
+            Console.WriteLine(shippingMethod);
 
             return 1;
         }
