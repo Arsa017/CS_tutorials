@@ -26,7 +26,6 @@ namespace HelloWorld
             var d = 5;
             //Console.WriteLine(!(a != d));
             Console.WriteLine(a > c || a < d);
-            return 1;
 
             // demo comments
 
@@ -35,6 +34,13 @@ namespace HelloWorld
             /* 
              *  Multi-line comment 
              */
+
+            var aleksandar = new Person();
+            aleksandar.firstName = "Aleksandar";
+            aleksandar.lastName = "Arsic";
+            aleksandar.Introduce();
+
+            return 1;
         }
     }
 }
