@@ -6,19 +6,26 @@ namespace HelloWorld
     {
         static int Main(string[] args)
         {
-            var number = "1234";
 
             try
             {
                 string str = "true";
                 bool b = Convert.ToBoolean(str);
-                Console.WriteLine(b);
-            } catch (Exception e)
+                //console.writeline(b);
+            }
+            catch (Exception e)
             {
                 Console.WriteLine("Prekoracenje pri konverziji tipa!");
             }
-               
 
+
+            // operators demo
+
+            var a = 10;
+            var c = 3;
+            var d = 5;
+            //Console.WriteLine(!(a != d));
+            Console.WriteLine(a > c || a < d);
             return 1;
         }
     }
