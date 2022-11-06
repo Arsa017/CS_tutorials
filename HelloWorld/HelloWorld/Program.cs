@@ -6,17 +6,25 @@ namespace HelloWorld
     {
         static int Main(string[] args)
         {
+            var numbers = new int[3];
+            numbers[0] = 1;
+            numbers[1] = 2;
+            numbers[2] = 3;
 
-            var aleksandar = new Person();
-            aleksandar.firstName = "Aleksandar";
-            aleksandar.lastName = "Arsic";
-            aleksandar.Introduce();
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
 
-            // adding Calculator class
+            var flags = new bool[3];
 
-            //var calculator = new Calculator();
-            var result =  Calculator.Add(1, 2);
-            Console.WriteLine(result);
+            flags[0] = true;
+
+            Console.WriteLine(flags[0]);
+            Console.WriteLine(flags[1]);
+            Console.WriteLine(flags[2]);
+
+            var names = new string[3] { "Zika", "Pera", "Mika" };
+            Console.WriteLine(names[0]);    
 
             return 1;
         }
