@@ -1,4 +1,4 @@
-﻿using System;
+﻿using HelloWorld.Math;
 
 namespace HelloWorld
 {
@@ -11,6 +11,12 @@ namespace HelloWorld
             aleksandar.firstName = "Aleksandar";
             aleksandar.lastName = "Arsic";
             aleksandar.Introduce();
+
+            // adding Calculator class
+
+            //var calculator = new Calculator();
+            var result =  Calculator.Add(1, 2);
+            Console.WriteLine(result);
 
             return 1;
         }
