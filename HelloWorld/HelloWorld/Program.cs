@@ -27,6 +27,14 @@ namespace HelloWorld
             //Console.WriteLine(!(a != d));
             Console.WriteLine(a > c || a < d);
             return 1;
+
+            // demo comments
+
+            // Single-line comment
+
+            /* 
+             *  Multi-line comment 
+             */
         }
     }
 }
