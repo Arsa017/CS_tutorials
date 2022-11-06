@@ -1,4 +1,4 @@
-﻿using HelloWorld.Math;
+﻿using System;
 
 namespace HelloWorld
 {
@@ -6,25 +6,23 @@ namespace HelloWorld
     {
         static int Main(string[] args)
         {
-            var numbers = new int[3];
-            numbers[0] = 1;
-            numbers[1] = 2;
-            numbers[2] = 3;
+            var firstName = "Pera";
+            var lastName = "Peric";
 
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
+            var fullName = firstName + " " + lastName;
+            var myFullName = string.Format("My name is {0} {1}", firstName, lastName);
+            Console.WriteLine(myFullName);
 
-            var flags = new bool[3];
+            var names = new string[3] { "Pera", "Zika", "Mika" };
+            var formattedNames = string.Join(", ", names);
+            Console.WriteLine(formattedNames);
 
-            flags[0] = true;
-
-            Console.WriteLine(flags[0]);
-            Console.WriteLine(flags[1]);
-            Console.WriteLine(flags[2]);
-
-            var names = new string[3] { "Zika", "Pera", "Mika" }; 
-            Console.WriteLine(names[0]);    
+            //var text = "Hi John\nLook into the following paths\nc:\\folder1\\folder2\nc:\\folder2\\folder3";
+            var text = @"Hi John
+                        Look into the following path
+                        c:\folder1\folder2
+                        c:\folder3\folder4";
+            Console.WriteLine(text);
 
             return 1;
         }
