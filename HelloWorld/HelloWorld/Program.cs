@@ -23,7 +23,7 @@ namespace HelloWorld
             Console.WriteLine(flags[1]);
             Console.WriteLine(flags[2]);
 
-            var names = new string[3] { "Zika", "Pera", "Mika" };
+            var names = new string[3] { "Zika", "Pera", "Mika" }; 
             Console.WriteLine(names[0]);    
 
             return 1;
