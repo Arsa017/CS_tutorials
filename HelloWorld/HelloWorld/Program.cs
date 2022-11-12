@@ -4,43 +4,42 @@ namespace HelloWorld
 {
     class Program
     {
-        static int Main(string[] args)
+        static void Main(string[] args)
         {
 
-            try
+            var numbers = new List<int>() { 1, 2, 3 };
+            numbers.Add(11);
+            numbers.Add(12);
+            numbers.Add(13);
+            numbers.AddRange(new int[4] { 20, 21, 22, 1 });
+
+            foreach (var item in numbers)
             {
-                string str = "true";
-                bool b = Convert.ToBoolean(str);
-                //console.writeline(b);
+                Console.WriteLine(item);
             }
-            catch (Exception e)
+
+
+            Console.WriteLine();
+            Console.WriteLine("Index of 1: " + numbers.IndexOf(1));
+            Console.WriteLine("last Index of 1: " + numbers.LastIndexOf(1));
+
+            Console.WriteLine("count: " + numbers.Count);
+
+
+            for (int i = 0; i < numbers.Count; i++)
             {
-                Console.WriteLine("Prekoracenje pri konverziji tipa!");
+                if (numbers[i] == 1)
+                    numbers.Remove(numbers[i]);
             }
 
 
-            // operators demo
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
 
-            var a = 10;
-            var c = 3;
-            var d = 5;
-            //Console.WriteLine(!(a != d));
-            Console.WriteLine(a > c || a < d);
-
-            // demo comments
-
-            // Single-line comment
-
-            /* 
-             *  Multi-line comment 
-             */
-
-            var aleksandar = new Person();
-            aleksandar.firstName = "Aleksandar";
-            aleksandar.lastName = "Arsic";
-            aleksandar.Introduce();
-
-            return 1;
+            numbers.Clear();
+            Console.WriteLine("count: " + numbers.Count);
         }
     }
 }
