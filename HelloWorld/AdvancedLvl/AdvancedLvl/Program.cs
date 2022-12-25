@@ -16,7 +16,7 @@ namespace AdvancedLvl
 
             const int factor = 5;
 
-            Func<int, int> multiplier = n => n * factor;        // prvi int je argument, drugi int je tip rezultata koji delegat vraca
+            Func<int, int> multiplier = n => n * factor;
 
             var result = multiplier(10);
 
